@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  acc_number: 9.99
+  amount: 9.99
+  tans_no: 9.99
+  trans_to: MyString
+  type: 
+
+two:
+  user_id: 1
+  acc_number: 9.99
+  amount: 9.99
+  tans_no: 9.99
+  trans_to: MyString
+  type: 

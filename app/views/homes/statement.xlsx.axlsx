@@ -1,0 +1,8 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "BankStatement") do |sheet|
+	sheet.add_row ["Date", "Transaction No", "Transaction", "amount"]
+	@statement.each do |stmnt|
+		sheet.add_row [stmnt.created_at, stmnt.trans_no, stmnt.t_type, stmnt.amount]
+		puts stmnt
+	end
+end

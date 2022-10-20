@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Newpro</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    
+    <%= yield %>
+        <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+     <!-- <script type="text/javascript">alert("<%= alert %>");</script> -->
+     <script>
+     function myFunction() {
+       let text = "Are you sure want to\nEither OK or Cancel.";
+       if (confirm(<%= alert %>) == true) {
+         text = "You pressed OK!";
+       } else {
+         text = "You canceled!";
+       }
+       document.getElementById("demo").innerHTML = text;
+     }
+     </script>
+  </body>
+</html>
